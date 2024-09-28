@@ -16,7 +16,7 @@ RUN apt-get install -y docker-ce
 
 ENV BUILD_SCRIPT_DIR .
 ENV BUILD_SCRIPT_NAME ./build.sh
-ENV BUILD_SCRIPT_ARGS "Release arm64 umr11"
+ENV BUILD_SCRIPT_ARGS "Release arm64"
 
 CMD ["sh", "-c", "cd ${BUILD_SCRIPT_DIR}; ${BUILD_SCRIPT_NAME} ${BUILD_SCRIPT_ARGS}"]
 
