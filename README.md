@@ -22,3 +22,8 @@ Call for Dockerfile inside repository root:
 ```
 docker build -t arm64_builder .
 ```
+# Run example compilation inside docker container based on arm64_builder image
+```
+docker run --rm -v <your root subpath to this repo>/example/:/builder/ --privileged -i arm64_builder
+```
+In this case BUILD_SCRIPT_DIR env variable inside container will be '.', i.e. 'example' folder and BUILD_SCRIPT_NAME will be 'build.sh' according Dockerfile content 
