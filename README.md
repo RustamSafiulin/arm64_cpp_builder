@@ -12,5 +12,5 @@ Testing the emulation environment:
 docker run --rm -t arm64v8/ubuntu:20.04 uname -m
 
 # Creating builder image
-Call for Dockerfile inside repository root
+Call for Dockerfile inside repository root: 
 docker build -t arm64_builder .
