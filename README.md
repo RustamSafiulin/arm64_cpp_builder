@@ -1,7 +1,7 @@
 # arm64_cpp_builder
 Short help describing how to compile cpp projects for arm64 under amd64 with QEMU emulation.
 
-# QEMU installation and build env
+# QEMU environment installation
 Install the qemu packages:
 ```
 sudo apt-get install qemu binfmt-support qemu-user-static 
