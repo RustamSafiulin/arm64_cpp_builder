@@ -27,3 +27,8 @@ docker build -t arm64_builder .
 docker run --rm -v <your root subpath to this repo>/example/:/builder/ --privileged -i arm64_builder
 ```
 In this case BUILD_SCRIPT_DIR env variable inside container will be '.', i.e. 'example' folder and BUILD_SCRIPT_NAME will be 'build.sh' according Dockerfile content 
+
+You also may specify BUILD_SCRIPT_DIR, BUILD_SCRIPT_NAME, BUILD_SCRIPT_ARGS container env variables
+```
+docker run --rm -v <your root subpath to this repo>/:/builder/ -e BUILD_SCRIPT_DIR=my_example/ -e BUILD_SCRIPT_NAME=./my_build.sh -e BUILD_SCRIPT_ARGS="Debug arm64 TEST_ARG1 TEST_ARG2" --privileged -i arm64_builder
+```
